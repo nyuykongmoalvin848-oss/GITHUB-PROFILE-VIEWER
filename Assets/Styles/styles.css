@@ -10,6 +10,7 @@ body {
   background-color: rgb(32 45 72);
   margin: 100px;
   border-radius: 15px;
+  justify-content: space-between;
 }
 
 input {
@@ -25,5 +26,61 @@ input {
   background-color: rgb(30 114 203);
   padding: 10px;
   border-radius: 10px;
-  margin: 10px 10px 10px 200px;
+  margin: 10px 10px 10px ;
+}
+
+.profile {
+  background-color: rgb(32 45 72);
+  margin: 100px;
+  border-radius: 15px;
+}
+
+.profile-container {
+  display: flex;
+  color: white;
+}
+
+.profile1 {
+  max-width: 50%;
+  border-radius: 50%;
+  margin: 10px;
+  
+}
+
+.Octocat {
+  color: rgb(73 73 247);
+}
+
+.date {
+  margin: 30px 10px 0px 350px;
+}
+
+.bio {
+  color: white;
+  margin-left: 40%;
+  color: rgb(120, 119, 119);
+}
+
+.people {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 100px 10px 40%;
+  background-color: rgb(12 32 52);
+  padding: 5px 100px 10px 30px;
+  border-radius: 15px;
+}
+
+h5 {
+ color: rgb(120, 119, 119);
+}
+
+.social {
+  display: grid;
+  margin: 10px 40% 50px;
+  
+}
+
+.link {
+ margin-bottom: 20px;
 }
