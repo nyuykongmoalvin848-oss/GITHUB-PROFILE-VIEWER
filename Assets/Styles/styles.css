@@ -6,7 +6,6 @@ body {
 .search-container {
   display: flex;
   color: white;
-  justify-content: center;
   background-color: rgb(32 45 72);
   margin: 100px;
   border-radius: 15px;
@@ -26,7 +25,7 @@ input {
   background-color: rgb(30 114 203);
   padding: 10px;
   border-radius: 10px;
-  margin: 10px 10px 10px ;
+  margin: 10px;
 }
 
 .profile {
@@ -44,10 +43,9 @@ input {
   max-width: 50%;
   border-radius: 50%;
   margin: 10px;
-  
 }
 
-.Octocat {
+.octocat {
   color: rgb(73 73 247);
 }
 
@@ -62,7 +60,7 @@ input {
 }
 
 .people {
-  color: white;
+  color: rgb(237 233 233);
   display: flex;
   justify-content: space-between;
   margin: 20px 100px 10px 40%;
@@ -72,15 +70,14 @@ input {
 }
 
 h5 {
- color: rgb(120, 119, 119);
+  color: rgb(120 119 119);
 }
 
 .social {
   display: grid;
   margin: 10px 40% 50px;
-  
 }
 
 .link {
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
