@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(12 32 52);
+}
+
+.search-container {
+  display: flex;
+  color: white;
+  justify-content: center;
+  background-color: rgb(32 45 72);
+  margin: 100px;
+  border-radius: 15px;
+}
+
+input {
+  background-color: rgb(32 45 72);
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  color: white;
+  margin: 10px;
+}
+
+.btn {
+  background-color: rgb(30 114 203);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 10px 10px 200px;
+}
