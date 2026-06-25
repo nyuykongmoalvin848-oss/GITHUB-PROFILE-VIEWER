@@ -50,13 +50,13 @@ input {
 }
 
 .date {
-  margin: 30px 10px 0px 350px;
+  margin: 30px 10px 0 350px;
 }
 
 .bio {
-  color: white;
+  color: rgb(253 244 244);
   margin-left: 40%;
-  color: rgb(120, 119, 119);
+  color: rgb(102 101 101);
 }
 
 .people {
