@@ -1,108 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Profile Viewer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Viewer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>GitHub Profile Viewer</h1>
-            <p class="subtitle">Search for any GitHub user</p>
-        </header>
+  <div class="box">
+    <header>
+      <h1>GitHub Profile Viewer</h1>
+      <p class="sub">Search for any GitHub user</p>
+    </header>
 
-        <div class="search-section">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Enter GitHub username..." autocomplete="off">
-                <button id="searchBtn">Search</button>
-            </div>
-            <div class="suggestions" id="suggestions"></div>
-        </div>
-
-        <div class="content">
-            <div class="loading" id="loading" style="display: none;">
-                <div class="spinner"></div>
-                <p>Loading profile...</p>
-            </div>
-
-            <div class="error" id="error" style="display: none;">
-                <p id="errorMessage"></p>
-                <button id="retryBtn">Try Again</button>
-            </div>
-
-            <div class="profile-card" id="profileCard" style="display: none;">
-                <div class="profile-header">
-                    <a href="#" target="_blank" id="profileLink" class="avatar-container">
-                        <img id="avatar" src="" alt="Profile Avatar">
-                    </a>
-                    <div class="profile-info">
-                        <a href="#" target="_blank" id="nameLink" class="name">
-                            <h2 id="name">User Name</h2>
-                        </a>
-                        <p id="username" class="username">@username</p>
-                        <p id="bio" class="bio">User bio goes here...</p>
-                    </div>
-                </div>
-
-                <div class="stats">
-                    <div class="stat">
-                        <span id="repos" class="stat-number">0</span>
-                        <span class="stat-label">Repos</span>
-                    </div>
-                    <div class="stat">
-                        <span id="followers" class="stat-number">0</span>
-                        <span class="stat-label">Followers</span>
-                    </div>
-                    <div class="stat">
-                        <span id="following" class="stat-number">0</span>
-                        <span class="stat-label">Following</span>
-                    </div>
-                    <div class="stat">
-                        <span id="gists" class="stat-number">0</span>
-                        <span class="stat-label">Gists</span>
-                    </div>
-                </div>
-
-                <div class="details">
-                    <div class="detail-item" id="companyItem">
-                        
-                        <span id="company">No company</span>
-                    </div>
-                    <div class="detail-item" id="locationItem">
-                        
-                        <span id="location">No location</span>
-                    </div>
-                    <div class="detail-item" id="blogItem">
-                        
-                        <a id="blog" href="#" target="_blank" class="link">No website</a>
-                    </div>
-                    <div class="detail-item" id="twitterItem">
-                      
-                        <a id="twitter" href="#" target="_blank" class="link">No Twitter</a>
-                    </div>
-                    <div class="detail-item" id="joinedItem">
-                        
-                        <span id="joined">Joined on</span>
-                    </div>
-                </div>
-
-                <div class="repos-section" id="reposSection" style="display: none;">
-                    <h3>Top Repositories</h3>
-                    <div class="repos-list" id="reposList"></div>
-                </div>
-            </div>
-
-            <div class="empty-state" id="emptyState">
-                
-                <h3>Search for a GitHub user</h3>
-                <p>Enter a username above to view their profile</p>
-            </div>
-        </div>
-
+    <div class="search">
+      <div class="row">
+        <input type="text" id="q" placeholder="Enter GitHub username..." autocomplete="off">
+        <button id="btn">Search</button>
+      </div>
+      <div class="sugs" id="sugs"></div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="main">
+      <div class="load hide" id="load">
+        <div class="spin"></div>
+        <p>Loading profile...</p>
+      </div>
+
+      <div class="err" id="err">
+        <p id="e-msg"></p>
+        <button id="retry">Try Again</button>
+      </div>
+
+      <div class="card hide" id="card">
+        <div class="head">
+          <a href="#" target="_blank" class="pic">
+            <img id="pic" src="" alt="Avatar">
+          </a>
+          <div class="info">
+            <a href="#" target="_blank" id="link" class="name">
+              <h2 id="name">User Name</h2>
+            </a>
+            <p id="user" class="user">@username</p>
+            <p id="bio" class="bio">User bio goes here...</p>
+          </div>
+        </div>
+
+        <div class="nums">
+          <div class="n">
+            <span id="repos" class="val">0</span>
+            <span class="lbl">Repos</span>
+          </div>
+          <div class="n">
+            <span id="followers" class="val">0</span>
+            <span class="lbl">Followers</span>
+          </div>
+          <div class="n">
+            <span id="following" class="val">0</span>
+            <span class="lbl">Following</span>
+          </div>
+          <div class="n">
+            <span id="gists" class="val">0</span>
+            <span class="lbl">Gists</span>
+          </div>
+        </div>
+
+        <div class="rows">
+          <div class="row">
+            <span id="comp">No company</span>
+          </div>
+          <div class="row">
+            <span id="loc">No location</span>
+          </div>
+          <div class="row">
+            <a id="web" href="#" target="_blank" class="link">No website</a>
+          </div>
+          <div class="row">
+            <a id="twit" href="#" target="_blank" class="link">No Twitter</a>
+          </div>
+          <div class="row">
+            <span id="date">Joined on</span>
+          </div>
+        </div>
+
+        <div class="repos hide" id="repos">
+          <h3>Top Repositories</h3>
+          <div class="repo-list" id="repo-list"></div>
+        </div>
+      </div>
+
+      <div class="empty" id="empty">
+        <h3>Search for a GitHub user</h3>
+        <p>Enter a username above to view their profile</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
