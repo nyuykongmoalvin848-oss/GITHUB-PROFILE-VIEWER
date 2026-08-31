@@ -80,3 +80,61 @@ h5 {
 .link {
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .search-container,
+  .profile {
+    margin: 20px 15px;
+    padding: 15px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input,
+  .btn {
+    margin: 0;
+    width: auto;
+    text-align: center;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile1 {
+    max-width: 120px;
+    margin-bottom: 15px;
+  }
+
+  .date {
+    margin: 10px 0 0 0;
+  }
+
+  .bio {
+    margin-left: 0;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .people {
+    flex-direction: row;
+    margin: 20px 15px;
+    padding: 15px;
+    justify-content: space-around;
+  }
+
+  .social {
+    grid-template-columns: 1fr;
+    margin: 20px 15px;
+    text-align: center;
+  }
+
+  .link {
+    margin-bottom: 15px;
+  }
+}
