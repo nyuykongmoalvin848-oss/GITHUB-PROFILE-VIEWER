@@ -7,3 +7,5 @@ const eMsg = document.getElementById("e-msg");
 const card = document.getElementById("card");
 const empty = document.getElementById("empty");
 const sugs = document.getElementById("sugs");
+
+const API = "https://api.github.com";
