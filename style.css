@@ -1,0 +1,404 @@
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #21262d;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --text2: #8b949e;
+  --accent: #58a6ff;
+  --accent2: #79c0ff;
+  --err: #f85149;
+  --ok: #3fb950;
+  --shadow: 0 4px 12px rgb(0 0 0 / 30%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.sub {
+  color: var(--text2);
+  font-size: 1.1rem;
+}
+
+.search {
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#q {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg2);
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#q:focus {
+  border-color: var(--accent);
+}
+
+#btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--ok);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sugs {
+  max-width: 500px;
+  margin: 8px auto 0;
+  background-color: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+}
+
+.sugs.show {
+  display: block;
+}
+
+.sug {
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid var(--border);
+}
+
+.sug .user {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.sug .type {
+  color: var(--text2);
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+.main {
+  min-height: 300px;
+}
+
+.load {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.spin {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.err {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: rgb(248 81 73 / 10%);
+  border: 1px solid var(--err);
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#e-msg {
+  color: var(--err);
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+#retry {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty h3 {
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.card {
+  background-color: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  animation: fade-in 0.3s ease-in;
+}
+
+.head {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.pic {
+  flex-shrink: 0;
+  display: block;
+}
+
+.pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--border);
+  transition: transform 0.2s;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  text-decoration: none;
+  color: var(--text);
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.name h2 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.info .user {
+  color: var(--text2);
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.bio {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.nums {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.n {
+  text-align: center;
+}
+
+.val {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.lbl {
+  color: var(--text2);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rows {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.rows .row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: var(--bg3);
+  border-radius: 6px;
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.repos {
+  margin-top: 24px;
+}
+
+.repos h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.repo-list {
+  display: grid;
+  gap: 12px;
+}
+
+.repo {
+  background-color: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  transition: border-color 0.2s;
+}
+
+.repo-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.repo-name {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.repo-vis {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text2);
+  text-transform: uppercase;
+}
+
+.repo-desc {
+  color: var(--text2);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.repo-nums {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text2);
+}
+
+.repo-n {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .box {
+    padding: 16px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .head {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pic img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .nums {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .n {
+    flex: 1 1 40%;
+  }
+
+  .rows {
+    grid-template-columns: 1fr;
+  }
+
+  .search .row,
+  .rows .row {
+    flex-direction: column;
+  }
+
+  .search {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <header>
+      <h1>GitHub Profile Viewer</h1>
+      <p class="sub">Search for any GitHub user</p>
+    </header>
+
+    <div class="search">
+      <div class="row">
+        <input type="text" id="q" placeholder="Enter GitHub username..." autocomplete="off">
+        <button id="btn">Search</button>
+      </div>
+      <div class="sugs" id="sugs"></div>
+    </div>
+
+    <div class="main">
+      <div class="load hide" id="load">
+        <div class="spin"></div>
+        <p>Loading profile...</p>
+      </div>
+
+      <div class="err hide" id="err">
+        <p id="e-msg"></p>
+        <button id="retry">Try Again</button>
+      </div>
+
+      <div class="card hide" id="card">
+        <div class="head">
+          <a href="#" target="_blank" class="pic">
+            <img id="pic" src="" alt="Avatar">
+          </a>
+          <div class="info">
+            <a href="#" target="_blank" id="link" class="name">
+              <h2 id="name">User Name</h2>
+            </a>
+            <p id="user" class="user">@username</p>
+            <p id="bio" class="bio">User bio goes here...</p>
+          </div>
+        </div>
+
+        <div class="nums">
+          <div class="n">
+            <span id="repos" class="val">0</span>
+            <span class="lbl">Repos</span>
+          </div>
+          <div class="n">
+            <span id="followers" class="val">0</span>
+            <span class="lbl">Followers</span>
+          </div>
+          <div class="n">
+            <span id="following" class="val">0</span>
+            <span class="lbl">Following</span>
+          </div>
+          <div class="n">
+            <span id="gists" class="val">0</span>
+            <span class="lbl">Gists</span>
+          </div>
+        </div>
+
+        <div class="rows">
+          <div class="row">
+            <span id="comp">No company</span>
+          </div>
+          <div class="row">
+            <span id="loc">No location</span>
+          </div>
+          <div class="row">
+            <a id="web" href="#" target="_blank" class="link">No website</a>
+          </div>
+          <div class="row">
+            <a id="twit" href="#" target="_blank" class="link">No Twitter</a>
+          </div>
+          <div class="row">
+            <span id="date">Joined on</span>
+          </div>
+        </div>
+
+        <div class="repos repos-section hide" id="repos-section">
+          <h3>Top Repositories</h3>
+          <div class="repo-list" id="repo-list"></div>
+        </div>
+      </div>
+
+      <div class="empty" id="empty">
+        <h3>Search for a GitHub user</h3>
+        <p>Enter a username above to view their profile</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
