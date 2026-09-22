@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(12 32 52);
+}
+
+.search-container {
+  display: flex;
+  color: white;
+  background-color: rgb(32 45 72);
+  margin: 100px;
+  border-radius: 15px;
+  justify-content: space-between;
+}
+
+input {
+  background-color: rgb(32 45 72);
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  color: white;
+  margin: 10px;
+}
+
+.btn {
+  background-color: rgb(30 114 203);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.profile {
+  background-color: rgb(32 45 72);
+  margin: 100px;
+  border-radius: 15px;
+}
+
+.profile-container {
+  display: flex;
+  color: white;
+}
+
+.profile1 {
+  max-width: 50%;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.octocat {
+  color: rgb(73 73 247);
+}
+
+.date {
+  margin: 30px 10px 0 350px;
+}
+
+.bio {
+  margin-left: 40%;
+  color: rgb(102 101 101);
+}
+
+.people {
+  color: rgb(237 233 233);
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 100px 10px 40%;
+  background-color: rgb(12 32 52);
+  padding: 5px 100px 10px 30px;
+  border-radius: 15px;
+}
+
+h5 {
+  color: rgb(120 119 119);
+}
+
+.social {
+  display: grid;
+  margin: 10px 40% 50px;
+}
+
+.link {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .search-container,
+  .profile {
+    margin: 20px 15px;
+    padding: 15px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input,
+  .btn {
+    margin: 0;
+    width: auto;
+    text-align: center;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile1 {
+    max-width: 120px;
+    margin-bottom: 15px;
+  }
+
+  .date {
+    margin: 10px 0 0 0;
+  }
+
+  .bio {
+    margin-left: 0;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .people {
+    flex-direction: row;
+    margin: 20px 15px;
+    padding: 15px;
+    justify-content: space-around;
+  }
+
+  .social {
+    grid-template-columns: 1fr;
+    margin: 20px 15px;
+    text-align: center;
+  }
+
+  .link {
+    margin-bottom: 15px;
+  }
+}
